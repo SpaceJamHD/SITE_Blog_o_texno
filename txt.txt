@@ -1,0 +1,7 @@
+font-family: 'BIZ UDPGothic', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Yeseva One', cursive;
+

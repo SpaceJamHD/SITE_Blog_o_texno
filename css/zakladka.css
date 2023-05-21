@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Lobster&family=Roboto:wght@100;300;400;500;700;900&family=Rubik+Mono+One&family=Russo+One&family=Yeseva+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #319b77;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+body {
+    /* background: #E5E5E5; */
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+/* .container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+} */
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 3px solid rgb(138, 23, 23); */
+}
+
+.self.main__wrapper {
+    width: 100%;
+}
+
+.main__wrapper div {
+    /* border: 3px solid rgb(138, 23, 23); */
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    min-height: 40px;
+}
+
+.main__header__container {
+    padding: 0 20px 0 60px;
+    flex: 1;
+}
+
+.self.content__container {
+    width: 97%;
+    margin: 0 auto;
+}
+
+.self.active {
+    color: rgb(255, 0, 0);
+}
+
+main {
+    margin-top: 120px;
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+
+.bg-primary {
+    background: var(--color-primary);
+    box-shadow: 0 0.8rem 0.8rem var(--color-light);
+}
+
+.bg-danger {
+    background: var(--color-danger);
+    box-shadow: 0 0.8rem 0.8rem var(--color-light);
+}
+
+.bg-success {
+    background: var(--color-success);
+    box-shadow: 0 0.8rem 0.8rem var(--color-light);
+}
+
+.bg-purple {
+    background: var(--color-primary);
+    box-shadow: 0 0.8rem 0.8rem var(--color-light);
+}
+
+.bg-dark {
+    background: #27282f;
+    box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.bg-purple-light {
+    background: var(--color-purple-light);
+}
+
+.bg-danger-light {
+    background: var(--color-danger-light);
+}
+
+.bg-primary-light {
+    background: var(--color-primary-light);
+}
+
+.bg-success-light {
+    background: var(--color-success-light);
+}
+
+.text-muted {
+    color: #86848c;
+}
+
+/* ============================================================= nav ===================================== */
+
+.self.main__nav__container {
+    margin: 0;
+}
+
+.main__nav__container {
+    backdrop-filter: blur(12px);
+    background: rgba(var(--tp-background-color-primary-rgb), .75);
+    position: fixed;
+    top: 0;
+    transition: background-color .2s ease-in-out 0s;
+    width: 100%;
+    z-index: 10;
+}
+
+.main__nav__container .logo {
+    display: flex;
+}
+
+.main__nav__container .logo img {
+    height: 110px;
+    margin-top: -13px;
+    margin-right: 0px;
+}
+
+.main__nav__container .logo p {
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 28px;
+    margin-top: 28px;
+    margin-left: -45px;
+}
+
+.main__nav__container .nav__header {
+    display: flex;
+}
+
+/* ============================ SEARCH ============================= */
+/* ========================= SEARCH ============================= */
+/* .wrapper .search-input {
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+} */
+
+.search-input input {
+    height: 55px;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+    margin-left: 200px;
+}
+
+.search-input.active input {
+    border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow: auto;
+}
+
+.search-input.active.autocom-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box li {
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.search-input.active.autocom-box li {
+    display: block;
+}
+
+.autocom-box li:hover {
+    background: #f2f2f2;
+}
+
+.search-input .icon {
+    position: absolute;
+    right: 142px;
+    top: 6px;
+    height: 55px;
+    width: 55px;
+    margin-top: 12px;
+    margin-right: 920px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* =========================================== ПОСТ ============================================= */
+
+.self.main__nav__container .Edit {
+    background-color: #fff;
+}
+
+.main__nav__container .Edit {
+    display: flex;
+    height: 55px;
+    width: 12%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0px 0 25px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+    margin-left: 300px;
+}
+
+.main__nav__container .Edit:hover button,
+.main__nav__container .Edit:hover span {
+    opacity: 1;
+    transition: 0.3s ease-in;
+}
+
+.main__nav__container .Edit span {
+    opacity: 0.4;
+    font-size: 32px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.main__nav__container .Edit button {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    opacity: 0.4;
+    margin-top: 10px;
+}
+
+.main__nav__container .Edit a {}
+
+
+/* ================================ ICONS WEIGHT ======================== */
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+.main__nav__container .icons {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 270px;
+    opacity: 0.4;
+    height: 28px;
+}
+
+.main__nav__container .icons span {
+    color: #3f3838;
+    margin-left: 0px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.main__nav__container .icons a {
+    display: flex;
+}
+
+.main__nav__container .icons a p {
+    color: #3f3838;
+    opacity: 0.6;
+    margin-top: 6px;
+    margin-left: -10px;
+    font-size: 20px;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.main__nav__container .one {
+    height: 28px;
+}
+
+.main__nav__container .one :hover {
+    opacity: 1;
+
+}
+
+.main__nav__container .one span:hover {
+    color: #000000;
+}
+
+.main__nav__container .two:hover span,
+.main__nav__container .two:hover p {
+    color: #000000;
+    opacity: 1;
+
+}
+
+/* ---------------------------------- MAIN ============================= */
+
+/* ---------------------------------- LEFT ============================= */
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+
+.main__header__container .left {
+    float: left;
+    margin-left: 60px;
+    position: fixed;
+    height: 85%;
+}
+
+.main__header__container .left .main__header__container .left aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+
+}
+
+.main__header__container .left aside h3 {
+    font-weight: 500;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+}
+
+.main__header__container .left aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+.main__header__container .left aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+/* .main__header__container .left aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+} */
+
+.main__header__container .left aside .sidebar a.active {
+    background: rgb(23 0 255 / 18%);
+    color: #8d4888;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.main__header__container .left aside .sidebar a.active::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: #bd7fb7;
+}
+
+.main__header__container .left aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem -3px);
+}
+
+.main__header__container .left aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+.main__header__container .left aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+.main__header__container .left aside .sidebar .message-count {
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 4px 10px;
+    font-size: 15px;
+    border-radius: var(--border-radius-1);
+}
+
+.main__header__container .left aside .sidebar .footer-left {
+    margin-top: 20px;
+}
+
+.main__header__container .left aside .sidebar .footer-left a {
+    height: 2.3rem;
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 600;
+}
+
+
+.main__header__container .left aside .sidebar .footer-left a span {
+    font-size: 18px;
+}
+
+
+
+/* ===================================== MID =============================== */
+
+.main__header__container .mid {}
+
+.main__header__container .mid .block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__header__container .mid .decription {
+    align-items: center;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: max-content max-content;
+    text-align: center;
+}
+
+.main__header__container .mid .block img {
+    margin-top: 100px;
+}
+
+.main__header__container .mid .block h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+
+}
+
+.main__header__container .mid .block p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+/* ---------------------------------- RIGHT ============================= */
+
+.main__header__container .right {
+    float: right;
+}
+
+/* ========================================== telegram =============================== */
+
+.main__header__container .right .tel {}
+
+.main__header__container .right .tel a {
+    align-items: center;
+    background: #14AAFF none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 28px;
+    text-decoration: none;
+    width: 18%;
+    color: #f7dbdb;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    right: 66px;
+    bottom: 770px;
+}
+
+.main__header__container .right .tel a img {
+    width: 45px;
+    position: absolute;
+    right: 230px;
+}
+
+.main__header__container .right .tel a:hover {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.main__header__container .right .tel a p {
+    margin-left: 45px;
+}
+
+/* ======================================== Updates ================================= */
+
+/* ===================== RECENT UPDATES ===================== */
+
+
+
+/* ===================== SALES ANALYTICS ===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.right .sales-analytics {
+    position: absolute;
+    right: 65px;
+    top: 250px;
+    bottom: 0px;
+}
+
+.right .sales-analytics h2 {
+    margin-bottom: 0.8rem;
+}
+
+.right .sales-analytics .item {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .sales-analytics .item:hover {
+    box-shadow: none;
+}
+
+.right .sales-analytics .item .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .sales-analytics .item .icon {
+    padding: 0.6rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+}
+
+.right .sales-analytics .item.offline .icon {
+    background: var(--color-danger);
+}
+
+.right .sales-analytics .item.customers .icon {
+    background: var(--color-success);
+}
+
+.right .sales-analytics .item.offline .danger {
+    margin: 3px 10px 0 10px;
+}
+
+.right .sales-analytics .item.online .success {
+    margin: 5px 10px 0 10px;
+}
+
+.right .sales-analytics .item.customers h5 {
+    margin: 3px 10px 0 10px;
+
+}
+
+.right .sales-analytics .add-product {
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .sales-analytics .add-product:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.right .sales-analytics .add-product div {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.right .sales-analytics .add-product div h3 {
+    font-weight: 600;
+}
+
+.right .sales-analytics .add-product div h5 {
+    padding: 0 10px 0 10px;
+}
+
+.right .sales-analytics h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+/* ========================================================== */
+
+
+footer {
+    display: none;
+}
+
+
+
+/* ====================================== udep */
+
+
+@media screen and (max-width: 1440px) {
+    .right .sales-analytics {
+        position: absolute;
+        right: 15px;
+        top: 250px;
+        bottom: 0px;
+    }
+
+    .main__header__container .right .tel a {
+        width: 21%;
+        right: 34px;
+    }
+
+    .main__header__container .left {
+        margin-left: 20px;
+    }
+
+    .search-input .icon {
+        margin-right: 635px;
+    }
+
+    .search-input input {
+        width: 205%;
+        margin-left: 63px;
+    }
+
+    .main__nav__container .icons {
+        margin-left: 180px;
+    }
+
+    .main__nav__container .Edit {
+        width: 37%;
+        margin-left: 392px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .right .sales-analytics {
+        display: none;
+    }
+
+    .main__header__container .right .tel a {
+        display: none;
+    }
+
+    .main__header__container .left {
+        margin-left: 20px;
+    }
+
+    .search-input .icon {
+        margin-right: 635px;
+    }
+
+    .search-input input {
+        width: 205%;
+        margin-left: 63px;
+    }
+
+    .main__nav__container .icons {
+        margin-left: 328px;
+    }
+
+    .main__nav__container .Edit {
+        width: 37%;
+        margin-left: 150px;
+    }
+
+    .search-input input {
+        display: none;
+    }
+
+    .main__header__container .left aside .sidebar a {
+        display: none;
+    }
+
+    .search-input .icon {
+        margin-right: 50px;
+        opacity: 0.4;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .main__footer__container .footer {
+        display: grid;
+    }
+
+    .main__footer__container .footer .sidebar {
+        background-color: #fff;
+        border: 1px solid #eaeaea;
+        bottom: 0;
+        box-shadow: 0 0 27px #0000001f;
+        grid-template-columns: repeat(4, 1fr);
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .main__footer__container .footer a .active {
+        color: #5ee43c;
+    }
+
+    .main__footer__container .footer a span:nth-child(0) {
+        fill: #7add40;
+        stroke: #c58634;
+        color: #e97211;
+
+    }
+
+    .main__footer__container .footer .sidebar a {
+        fill: #1d706d;
+        stroke: #1d706d;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 16px 24px;
+        color: #000000;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .right .sales-analytics {
+        display: none;
+    }
+
+    .main__header__container .right .tel a {
+        display: none;
+    }
+
+    .main__header__container .left {
+        margin-left: 20px;
+    }
+
+    .search-input .icon {
+        margin-right: 635px;
+    }
+
+    .search-input input {
+        width: 205%;
+        margin-left: 63px;
+    }
+
+    .main__nav__container .icons {
+        margin-left: 150px;
+    }
+
+    .main__nav__container .Edit {
+        margin-left: 75px;
+        width: 8%;
+        position: relative;
+    }
+
+    .main__nav__container .Edit span {
+        position: absolute;
+        right: 8px;
+    }
+
+    .main__nav__container .Edit button {
+        display: none;
+    }
+
+    .search-input input {
+        display: none;
+    }
+
+    .main__header__container .left aside .sidebar a {
+        display: none;
+    }
+
+    .search-input .icon {
+        margin-right: 50px;
+        opacity: 0.4;
+    }
+
+    footer {
+        display: block;
+    }
+
+    .main__footer__container .footer {
+        display: grid;
+    }
+
+    .main__footer__container .footer .sidebar {
+        background-color: #fff;
+        border: 1px solid #eaeaea;
+        bottom: 0;
+        box-shadow: 0 0 27px #0000001f;
+        grid-template-columns: repeat(4, 1fr);
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .main__footer__container .footer a .active {
+        color: #5ee43c;
+    }
+
+    .main__footer__container .footer a span:nth-child(0) {
+        fill: #7add40;
+        stroke: #c58634;
+        color: #e97211;
+
+    }
+
+    .main__footer__container .footer .sidebar a {
+        fill: #1d706d;
+        stroke: #1d706d;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding: 16px 24px;
+        color: #000000;
+    }
+
+}
